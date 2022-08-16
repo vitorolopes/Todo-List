@@ -16,6 +16,7 @@ const Header = () => {
         complete: false
      }
      addTodo(newTodo)
+     setinputText("")
    }
 
   return (

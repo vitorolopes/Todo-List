@@ -14,6 +14,18 @@ const reducer = (prevState,action) => {
                 )
             }
         } 
+        case "TOGGLE_TODO":{
+            return {
+                ...prevState,
+                todos: prevState.todos.map( todo => 
+                    todo.id === action.payload 
+                     ?
+                      {...todo, complete: !todo.complete}
+                     :
+                      todo
+                )
+            }
+        }
         default:
         return prevState
     }

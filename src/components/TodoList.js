@@ -3,8 +3,7 @@ import { useStateContext } from '../context.js/stateContextProvider';
 
 const TodoList = () => {
 
-  const {todos, deleteTodo} = useStateContext();
-  console.log(todos);
+  const {todos, deleteTodo, toggleTodo} = useStateContext();
 
   return (
     <div className='list'>
@@ -12,12 +11,22 @@ const TodoList = () => {
       <div className="list-todos">
 
         {todos.map( todo => {
-          const {inputText,id,completed} = todo;
+          const {inputText,id,complete} = todo; //! Interesting case about destructuring
+          //! if instead of complete I used completed, completed would be "undefined" but
+          //! no error would be thrown.
+          console.log(id)
           return(
             <div className="todoItem">
-              <div className="item text">{inputText}</div>
+              <div className="item text" style={{color: complete ? "green" : "red"}}
+              >
+                {inputText}
+              </div>
               <div>
-                <button className="item-toggleBtn">Toogle</button>
+                <button className="item-toggleBtn"
+                        onClick={() => toggleTodo(id)}
+                >
+                  Toogle
+                </button>
                 <button className="item-deleteBtn"
                         onClick={ () => deleteTodo(id)}
                 >

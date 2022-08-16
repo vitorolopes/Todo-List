@@ -19,7 +19,12 @@ export const StateContextProvider = ( {children} ) => {
 
  const deleteTodo = (id) => { 
     dispatch({type: "DELETE_TODO", payload: id})
-  }
+ }
+
+ const toggleTodo = (id) => {
+    dispatch({type: "TOGGLE_TODO", payload: id})
+    console.log("hey")
+ }
 
  return(
         <StateContext.Provider
@@ -27,7 +32,8 @@ export const StateContextProvider = ( {children} ) => {
                 dummyValue,
                 addTodo,
                 todos: state.todos,
-                deleteTodo
+                deleteTodo,
+                toggleTodo
             }}
         >
             {children}
