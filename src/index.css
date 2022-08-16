@@ -1,13 +1,107 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.input {
+  background: #2c4150;
+  color: #fff;
+  width: 100%;
+  border: 1px solid #707070;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.input-title {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.input-input {
+  width: 100%;
+  padding: 15px 17px;
+  margin-bottom: 0.8rem;
+  border: 1px solid #707070;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  border: 1px solid #707070;
+  border-radius: 15px;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 17px;
+  background: #b4b4b4;
+}
+
+.list {
+  width: 100%;
+  background: #2c4150;
+  border: 1px solid #707070;
+  padding: 1rem;
+}
+
+.list-title {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.list-todos {
+  width: 100%;
+  height: 470px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.list-todos::-webkit-scrollbar {
+  display: none;
+}
+
+.todoItem {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #707070;
+  background: #b4b4b4;
+}
+
+.item-text {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.item-toggleBtn {
+  border: 1px solid #707070;
+  border-radius: 15px;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 17px;
+  background: #412b4f;
+  margin-right: 0.5rem;
+  outline: none;
+}
+
+.item-deleteBtn {
+  border: 1px solid #707070;
+  border-radius: 15px;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 17px;
+  background: #4f2e2b;
+  outline: none;
 }
