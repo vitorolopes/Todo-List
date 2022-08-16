@@ -4,8 +4,7 @@ import { useStateContext } from '../context.js/stateContextProvider';
 
 const Header = () => {
 
-  const {dummyValue, addTodo} = useStateContext();
- // console.log(dummyValue);
+  const { addTodo} = useStateContext();
 
   const [inputText, setinputText] = useState("")
 
@@ -17,7 +16,6 @@ const Header = () => {
         complete: false
      }
      addTodo(newTodo)
-     console.log("Hey")
    }
 
   return (
